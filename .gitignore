@@ -41,6 +41,14 @@ ScaffoldingReadMe.txt
 *~
 CodeCoverage/
 
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
 # MSBuild Binary and Structured Log
 *.binlog
 
