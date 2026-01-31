@@ -4,10 +4,14 @@ namespace CurrencyConverter.Tests;
 
 public class ConverterTests
 {
-    [Theory]
-    [InlineData("EUR", "HKD", 12, 9)]
-    public void ConvertCurrency_Succeeds(string from, string to, decimal original, decimal expected)
+    [Fact]
+    public void ConvertCurrency_Succeeds()
     {
+        const string from = "EUR";
+        const string to = "HKD";
+        const int original = 12;
+        const int expected = 9;
+        
         var mockRepository = new Mock<ICurrencyRepository>();
         mockRepository.Setup(repo => repo.GetCurrencyByCode(to)).Returns(
             new Currency
