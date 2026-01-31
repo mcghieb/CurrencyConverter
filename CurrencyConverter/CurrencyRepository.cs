@@ -1,6 +1,6 @@
 namespace CurrencyConverter;
 
-public class CurrencyRepository
+public class CurrencyRepository : ICurrencyRepository
 {
     private readonly CurrencyDbContext _context = new();
 

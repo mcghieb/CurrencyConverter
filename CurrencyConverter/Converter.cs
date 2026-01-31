@@ -1,15 +1,15 @@
 namespace CurrencyConverter;
 
-public class Converter
+public class Converter(ICurrencyRepository? repository = null)
 {
-    private readonly CurrencyRepository _repository = new();
-        
+    private readonly ICurrencyRepository _repository = repository ?? new CurrencyRepository();
+
     public decimal ConvertCurrency(string currencyFrom, string currencyTo, decimal amount)
     {
         var fromRate = GetExchangeRate(currencyFrom);
         var toRate = GetExchangeRate(currencyTo);
 
-        if (decimal == 0)
+        if (amount == 0)
         {
             throw new ArgumentException("Currency must be greater than zero");
         }
