@@ -1,6 +1,6 @@
 namespace CurrencyConverter;
 
-public class Program
+public class CurrencyRepository
 {
     
 }
